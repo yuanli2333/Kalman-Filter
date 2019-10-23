@@ -1,9 +1,9 @@
 %% just for fun
 
 clear
-N=100; %number of samples, if N很大，到一定阶段，Kf,K,P都变成constant
+N=100; %number of samples, if N寰堝ぇ锛屽埌涓�瀹氶樁娈碉紝Kf,K,P閮藉彉鎴恈onstant
 Nrun=1; %number of runs
-T=1; %sampling interval,采样间隔
+T=1; %sampling interval,閲囨牱闂撮殧
 sw=0; % sigma_w
 sv=1; % sigma_v
 %%%%%%%%%
@@ -83,8 +83,8 @@ for i=2:40
    im = frame2im(frame); 
    [imind,cm] = rgb2ind(im,256); 
    % Write to the GIF File  
-   imwrite(imind,cm,filename,'gif','WriteMode','append'); 
 end
+imwrite(imind,cm,filename,'gif','Loopcount',inf)
 %movie(M,1,3);
 %movie2avi(M,'KalmanFilter.avi');
 
